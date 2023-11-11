@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeHeroInformationScreen : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class ChangeHeroInformationScreen : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return)){
            SceneManager.LoadScene("FirstRooom");
-        }        
+        }
+
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class ChangeHeroInformationScreen : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return)){
            SceneManager.LoadScene("FirstRooom");
-        }        
+        }
+                
     }
 }
