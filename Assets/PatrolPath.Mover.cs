@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 namespace Platformer.Mechanics
@@ -13,6 +14,13 @@ namespace Platformer.Mechanics
                 this.path = path;
                 this.duration = (path.endPosition - path.startPosition).magnitude/speed;
                 this.startTime = Time.time;
+            }
+
+            public Vector2 Position {
+                get {
+                    p = Mathf.InverseLerp(0, duration, Mathf.PingPong(Time.time - startTime, duration));
+                    return path.transform.TransformPoint(Vector2.Lerp(path.startPosition, path.endPosition, p));
+                }
             }
 
 

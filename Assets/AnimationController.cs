@@ -1,7 +1,7 @@
-/*using UnityEngine;
+using UnityEngine;
 
 namespace Platformer.Mechanics {
-    public class AnimationController {
+    public class AnimationController : MonoBehaviour {
         public float maxSpeed = 7;
         public float jumpTakeOffSpeed = 7;
 
@@ -10,11 +10,11 @@ namespace Platformer.Mechanics {
         public bool stopJump;
         SpriteRenderer spriteRenderer;
         Animator animator;
-        ///PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+        //PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         protected virtual void Awake() {
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
         }
     }
-}*/
+}

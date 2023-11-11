@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeIntroScreen : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ChangeIntroScreen : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return)){
            SceneManager.LoadScene("BackgroundInfo");
         }
+
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class ChangeIntroScreen : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return)){
            SceneManager.LoadScene("BackgroundInfo");
-        }  
+        }
+          
     }
 }
