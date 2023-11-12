@@ -242,7 +242,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 987234213}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f28bdd3f6c42d4f428d6950986c8e382, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -355,11 +355,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3386739614962788629, guid: 56a828150e8801e419c0cd2e99967ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.057559
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3386739614962788629, guid: 56a828150e8801e419c0cd2e99967ac0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.668934
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 3386739614962788629, guid: 56a828150e8801e419c0cd2e99967ac0, type: 3}
       propertyPath: m_LocalPosition.z
