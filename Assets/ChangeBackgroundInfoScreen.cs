@@ -9,12 +9,13 @@ public class ChangeBackgroundInfoScreen : MonoBehaviour
     int counter = 0;
     bool flag = false;
     int flagCounter = 0;
-    //Text Text;
+    //Text Title;
     // Start is called before the first frame update
     void Start()
     {
        Input.ResetInputAxes();       
        counter = 0;
+       SceneManager.UnloadSceneAsync("HeroInfo");
        //Text.text = "Hi";
     }
     
