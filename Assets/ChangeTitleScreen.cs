@@ -11,6 +11,9 @@ public class ChangeIntroScreen : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync("BackgroundInfo");
         SceneManager.UnloadSceneAsync("HeroInfo");
+        SceneManager.UnloadSceneAsync("FirstRooom");
+        SceneManager.UnloadSceneAsync("SpringLevel");
+        SceneManager.UnloadSceneAsync("SummerLevel");
     }
 
     // Update is called once per frame
