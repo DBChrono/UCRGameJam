@@ -9,7 +9,8 @@ public class ChangeIntroScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SceneManager.UnloadSceneAsync("BackgroundInfo");
+        SceneManager.UnloadSceneAsync("HeroInfo");
     }
 
     // Update is called once per frame
