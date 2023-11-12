@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     private float horizontal;
-    public float speed = 5f;
-    public float jumpPower = 4f;
-    bool facingRight = true;
+    public float speed = 10f;
+    public float jumpPower = 6f;
+    private bool facingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         SwitchSide();
     }
 
-    private void UpdateFixed()
+    private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SwitchSide()
     {
-        if((horizontal < 0f && facingRight) || (horizontal > 0f && !facingRight))
+        if (facingRight && horizontal < 0f || !facingRight && horizontal > 0f)
         {
             facingRight = !facingRight;
             Vector3 localScale = transform.localScale;
