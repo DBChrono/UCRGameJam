@@ -6,22 +6,28 @@ using UnityEngine.UI;
 
 public class ChangeIntroScreen : MonoBehaviour
 {
-
+    int counter = 0;
     // Start is called before the first frame update
     void Start()
     {
-        if(Input.GetKeyDown(KeyCode.Return)){
-           SceneManager.LoadScene("BackgroundInfo");
-        }
-
+        counter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return)){
+        if(Input.GetKey(KeyCode.Space)){
+            counter++;
+        }
+        if(counter > 0){
            SceneManager.LoadScene("BackgroundInfo");
         }
           
     }
+
+    void ChangeScreen(){
+        if(Input.GetKey(KeyCode.Return)){
+           SceneManager.LoadScene("BackgroundInfo");
+        }
+    }    
 }
