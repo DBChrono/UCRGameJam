@@ -7,21 +7,33 @@ using UnityEngine.UI;
 public class ChangeHeroInformationScreen : MonoBehaviour
 {
     int counter = 0;
+    bool flag = false;
+    int flagCounter = 0;
     // Start is called before the first frame update
     void Start()
     {
+        Input.ResetInputAxes();
         counter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Return)){
-            counter++;
+        if(flag){
+            if(Input.GetKey(KeyCode.Space)){
+                counter++;
+            }
+            if(counter > 0){
+                SceneManager.LoadScene("FirstRooom");
+            }            
         }
-        if(counter > 0){
-           SceneManager.LoadScene("FirstRooom");            
+        else{
+            if(flagCounter == 300){
+                flag = true;
+            }
+            flagCounter++;
         }
+          
     }
 
     void ChangeScreen(){
