@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Platformer.Mechanics {
-    public class AnimationController : MonoBehaviour {
+    public class AnimationController : KinematicObject {
         public float maxSpeed = 7;
         public float jumpTakeOffSpeed = 7;
 
