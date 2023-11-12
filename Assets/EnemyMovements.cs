@@ -17,15 +17,18 @@ namespace Platformer.Mechanics {
         // Start is called before the first frame update
         void Start()
         {
+            control = GetComponent<AnimationController>();
             _collider = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
+
 
         // Update is called once per frame
         void Update()
         {
             if (path != null) {
                 if (mover == null) mover = path.CreateMover(7*0.5f);
+                control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
         }
     }
