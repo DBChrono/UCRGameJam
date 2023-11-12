@@ -20,14 +20,14 @@ public class ChangeIntroScreen : MonoBehaviour
     void Update()
     {
         if(Input.GetKey(KeyCode.Return)){
-            SceneManager.LoadScene("BackgroundInfo");
+            SceneManager.LoadScene("FirstRooom");
         }
           
     }
 
     void ChangeScreen(){
         if(Input.GetKey(KeyCode.Return)){
-           SceneManager.LoadScene("BackgroundInfo");
+           SceneManager.LoadScene("FirstRooom");
         }
     }    
 }
