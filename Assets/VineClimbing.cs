@@ -15,7 +15,7 @@ public class VineClimbing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical = Input.GetAxis("vertical");
+        vertical = Input.GetAxis("Vertical");
         if(isVine && Mathf.Abs(vertical) > 0f){
             isClimbing = true;
         }
@@ -23,7 +23,7 @@ public class VineClimbing : MonoBehaviour
 
     private void FixedUpdate(){
         if(isClimbing){
-            rb.gravityScale= 0f;
+            rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
         }
         else{
