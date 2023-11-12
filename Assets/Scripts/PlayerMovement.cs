@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower = 6f;
     private bool facingRight = true;
 
+    public FireballMovement FireballPrefab;
+    public Transform LaunchOffset;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -28,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
         SwitchSide();
+        if(Input.GetKeyDown(KeyCode.E)){
+            Instantiate(FireballPrefab, LaunchOffset.position, transform.rotation);
+        }
     }
 
     private void FixedUpdate()
