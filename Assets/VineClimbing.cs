@@ -7,7 +7,7 @@ public class VineClimbing : MonoBehaviour
 
     private float vertical;
     private float speed = 8f;
-    private bool isVine;
+    public bool isVine;
     private bool isClimbing;
 
     [SerializeField] private Rigidbody2D rb;
