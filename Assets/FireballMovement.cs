@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float Speed = 4.5f;
+    // Update is called once per frame
+    private void Update()
     {
-        
+        transform.position += -transform.right * Time.deltaTime * Speed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnCollisionEnter2D(Collision2D collision){
+        Destroy(gameObject);
     }
 }
